@@ -1,0 +1,45 @@
+{
+  "name": "next-roam",
+  "description": "Prototype testing in react using SSR",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_PATH=. NODE_ENV=production node server.js",
+    "lint": "standard 'api/*' 'components/*' 'layouts/*' 'pages/*' 'styles/*' 'routes.js' 'server.js'",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.2.1",
+    "express": "^4.16.2",
+    "husky": "^0.14.3",
+    "isomorphic-unfetch": "^2.1.1",
+    "jquery": "^3.3.1",
+    "lint-staged": "^4.2.3",
+    "next": "^6.1.1",
+    "next-routes": "^1.1.0",
+    "popper.js": "^1.14.4",
+    "react": "^16.4.2",
+    "react-bootstrap": "^0.32.3",
+    "react-dom": "^16.4.2",
+    "standard": "^10.0.3",
+    "styled-components": "^2.2.1"
+  },
+  "now": {
+    "alias": "next-go"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  }
+}
